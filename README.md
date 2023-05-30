@@ -5,7 +5,7 @@
 | [Matheus Perillo](https://github.com/MatheusPerillo) | 190093421
 
 # Introdução 
-Este repositório foi criado para o desenvolvimento do segundo módulo de Greedy da disciplina Projeto de Algoritmos do Professor Maurício Serrano. Ele aborda os algoritmos como o do Huffman e Interval Partitioning.
+Este repositório foi criado para o desenvolvimento do segundo módulo de Greedy da disciplina Projeto de Algoritmos do Professor Maurício Serrano. Ele aborda os algoritmos como o do Huffman, Interval Partitioning, Interval Scheduling e Scheduling to Minimize Lateness.
 Portanto fizemos a resolução de alguns exercícios em Judges.
 
 # Apresentação
@@ -25,6 +25,18 @@ O algoritmo utilizado para codificar e decodificar as URLs no problema "Encode a
 A solução proposta para o problema das reservas de voos utiliza uma abordagem gananciosa, inspirada no algoritmo de Interval Partition. Em vez de percorrer todos os voos para atualizar os assentos a cada reserva, optamos por uma estratégia que minimiza o número de operações realizadas. Ao percorrer as reservas, adicionamos a quantidade de assentos reservados no voo inicial e subtraímos a mesma quantidade no voo seguinte ao término do intervalo da reserva, acumulando as alterações de assentos. Dessa forma, conseguimos obter o número total de assentos reservados para cada voo, evitando iterações desnecessárias.
 
 ![Minimum Score of a Path Between Two Citie](/images/1109.png)
+
+## [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/description/)
+
+Nesta solução, os intervalos são ordenados de forma crescente com base no tempo de término (a[1]). Em seguida, percorremos os intervalos a partir do segundo intervalo, verificando se há sobreposição com o intervalo anterior. Caso haja sobreposição, incrementamos o contador count. Caso contrário, atualizamos o tempo de término end para o tempo de término do intervalo atual. Ao final do loop, o valor de count representa o número mínimo de intervalos a serem removidos para evitar a sobreposição. Essa solução utiliza o algoritmo de Interval Scheduling para selecionar o conjunto máximo de intervalos não sobrepostos
+
+![Non-overlapping Intervals](/images/435.jpeg)
+
+## [630. Course Schedule III](https://leetcode.com/problems/course-schedule-iii/description/)
+
+Essa solução adota o algoritmo "Scheduling to Minimize Lateness" para otimizar o número de cursos concluídos dentro dos prazos estipulados. O algoritmo percorre a lista de cursos, verificando se é viável concluir cada curso dentro do prazo máximo. Se não for possível, o algoritmo substitui um curso com prazo máximo maior pelo curso atual, caso isso resulte em um menor atraso total.
+
+![Course Schedule III](/images/630.jpeg)
 
 
 # Instalação
